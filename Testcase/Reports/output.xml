@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.10.5 on win32)" generated="20230523 11:53:18.994" rpa="false" schemaversion="3">
+<suite id="s1" name="TestCase" source="C:\Users\HP\OneDrive\Desktop\Amazon\TestCase\TestCase.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<arg>options=${auto_close}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230523 11:53:19.423" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20230523 11:53:19.420" endtime="20230523 11:53:31.201"/>
+</kw>
+<test id="s1-t1" name="TC1:Get Response" line="13">
+<kw name="Log To Console" library="BuiltIn" type="SETUP">
+<arg>${Set Up1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230523 11:53:31.222" endtime="20230523 11:53:31.240"/>
+</kw>
+<kw name="Given Scrool Into Required Field And Click The Element" library="Keywords">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230523 11:53:31.276" endtime="20230523 11:53:32.073"/>
+</kw>
+<kw name="Wait And Scroll To The Element" library="Keywords">
+<arg>${TodayDeals}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${element1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230523 11:53:32.074" endtime="20230523 11:53:32.326"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${element1}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230523 11:53:32.326" endtime="20230523 11:53:32.781"/>
+</kw>
+<status status="PASS" starttime="20230523 11:53:32.074" endtime="20230523 11:53:32.782"/>
+</kw>
+<kw name="Click On The Required Item" library="Keywords">
+<arg>${Select_Item}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230523 11:53:32.784" level="INFO">Clicking element 'xpath://*[@class='a-unordered-list a-nostyle a-horizontal feed-carousel-shelf _deals-shoveler-v2_style_list__pjYuB']/li[3]'.</msg>
+<status status="PASS" starttime="20230523 11:53:32.783" endtime="20230523 11:53:34.896"/>
+</kw>
+<status status="PASS" starttime="20230523 11:53:32.782" endtime="20230523 11:53:34.896"/>
+</kw>
+<status status="PASS" starttime="20230523 11:53:31.275" endtime="20230523 11:53:34.897"/>
+</kw>
+<kw name="When Get The Price" library="Keywords">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Price_1}</var>
+<arg>${Price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230523 11:53:35.236" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230523 11:53:35.237" level="FAIL">Element with locator 'xpath://*[@class='a-price-whole'][2]' not found.</msg>
+<status status="FAIL" starttime="20230523 11:53:34.899" endtime="20230523 11:53:35.290"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Price_1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230523 11:53:35.290" endtime="20230523 11:53:35.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230523 11:53:35.291" endtime="20230523 11:53:35.291"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Price_2}</var>
+<arg>${Price_PDetail}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230523 11:53:35.291" endtime="20230523 11:53:35.291"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Price_2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230523 11:53:35.291" endtime="20230523 11:53:35.291"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Price_1}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230523 11:53:35.291" endtime="20230523 11:53:35.291"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${Price_2}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="NOT RUN" starttime="20230523 11:53:35.291" endtime="20230523 11:53:35.291"/>
+</kw>
+<status status="FAIL" starttime="20230523 11:53:34.898" endtime="20230523 11:53:35.292"/>
+</kw>
+<kw name="And Select The Product" library="Keywords">
+<status status="NOT RUN" starttime="20230523 11:53:35.293" endtime="20230523 11:53:35.293"/>
+</kw>
+<kw name="Then Table" library="Keywords">
+<status status="NOT RUN" starttime="20230523 11:53:35.294" endtime="20230523 11:53:35.294"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn" type="TEARDOWN">
+<arg>${Teardown1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230523 11:53:35.296" endtime="20230523 11:53:35.297"/>
+</kw>
+<doc>Launching The Browser And Clicking The Item</doc>
+<tag>Launch The Browser</tag>
+<status status="FAIL" starttime="20230523 11:53:31.201" endtime="20230523 11:53:35.297">Element with locator 'xpath://*[@class='a-price-whole'][2]' not found.</status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230523 11:53:35.300" endtime="20230523 11:53:38.820"/>
+</kw>
+<doc>Open The Browser and Navigate To The Required Item And Compare The Price</doc>
+<status status="FAIL" starttime="20230523 11:53:18.995" endtime="20230523 11:53:38.820"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Launch The Browser</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestCase">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
